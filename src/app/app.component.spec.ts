@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'rick-morty-findo'`, () => {
+  it(`should have as title 'rick-and-morty-findo'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('rick-morty-findo');
+    expect(app.title).toEqual('rick-and-morty-findo');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('rick-morty-findo app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('rick-and-morty-findo app is running!');
   });
 });

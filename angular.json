@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "rick-morty-findo"
+  "defaultProject": "rick-morty-findo",
+  "cli": {
+    "analytics": "af47b98d-abca-46ea-ab30-bff9566bc440"
+  }
 }

@@ -1,0 +1,41 @@
+<div class="left">
+  <div class="main-panel">
+    <div
+      infiniteScroll
+      [infiniteScrollDistance]="2"
+      [infiniteScrollThrottle]="50"
+      [infiniteScrollContainer]="'.main-panel'"
+      [fromRoot]="true"
+      (scrolled)="onScroll()"
+    >
+      <div *ngFor="let item of episodes">
+        <div *ngIf="functionActive">
+          <div class="card" style="width: 22rem">
+            <div class="card-body">
+              <h2 class="card-title">{{ item.name }}</h2>
+              <h5>{{ item.id }}</h5>
+              <p>{{ item.air_date }}</p>
+              <h5>Number of Characters: {{ item.characters.length }}</h5>
+              <a href="#" (click)="showDetail(item.url)" class="btn btn-primary"
+                >Show Detail</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="right" *ngIf="episodeDetailActive">
+  <div class="card" style="width: 22rem">
+    <div class="card-body">
+      <h2 class="card-title">{{ episodeDetail.name }}</h2>
+      <h5>On air: {{ episodeDetail.air_date }}</h5>
+      <h5>Number of Characters: {{ episodeDetail.characters.length }}</h5>
+      <a href="#" (click)="showDetail(item.url)" class="btn btn-primary"
+        >Hide</a
+      >
+    </div>
+  </div>
+</div>
